@@ -1,0 +1,19 @@
+<h1>Add Hooper</h1>
+<label for="firstName">First Name</label>
+<input type="text" [(ngModel)]="firstName" />
+<br />
+<label for="lastName">Last Name</label>
+<input type="text" [(ngModel)]="lastName" />
+<br />
+<label for="jerseyNum">Jersey Num</label>
+<input type="text" [(ngModel)]="jerseyNum" />
+<br />
+<label for="salary">Salary</label>
+<input type="text" [(ngModel)]="salary" />
+
+<div *ngIf="firstName && lastName && jerseyNum && salary">
+  add player: {{ firstName }}, {{ lastName }}
+  <button (click)="addPlayer(firstName, lastName, jerseyNum, salary)">
+    Add
+  </button>
+</div>
